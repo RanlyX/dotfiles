@@ -1,0 +1,28 @@
+# Common settings
+
+# Opt
+export OPT=$OPT:/opt/go/bin
+export OPT=$OPT:/opt/maven/bin
+export OPT=$OPT:/opt/gradle/bin
+export OPT=$OPT:/opt/eclipse
+export OPT=$OPT:/opt/Postman
+export OPT=$OPT:/opt/intellij/bin
+export OPT=$OPT:/opt/nvim/bin
+
+# Path
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$OPT
+
+# Terminal
+export TERM=xterm-256color
+
+# Java
+export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+
+# Proxy
+[ -f ~/.shrc/rc/proxy ] && source ~/.shrc/rc/proxy
+[ -f ~/.shrc/alias/proxy.alias ] && source ~/.shrc/alias/proxy.alias
+
+# Alias
+[ -f ~/.shrc/alias/ssh.alias ] && source ~/.shrc/alias/ssh.alias 
+[ -f ~/.shrc/alias/anydesk.alias ] && source ~/.shrc/alias/anydesk.alias 
