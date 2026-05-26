@@ -1,0 +1,17 @@
+proxyCommand() { 
+    case $cmd in
+        off)
+            unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY no_proxy NO_PROXY;
+            ;;
+        on)
+            export http_proxy="http://192.168.87.189:3128"; export https_proxy="http://192.168.87.189:3128"; export no_proxy=localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,gitlab.xo;
+            ;;
+        status)
+            env | grep -Pi '(https?|no)_proxy';
+            ;;
+    esac
+}
+
+alias proxy_off='unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY no_proxy NO_PROXY'
+alias proxy_on='export http_proxy="http://192.168.87.189:3128"; export https_proxy="http://192.168.87.189:3128"; export no_proxy=localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,gitlab.xo;'
+alias proxy_status="env | grep -Pi '(https?|no)_proxy'"

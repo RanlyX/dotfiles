@@ -1,0 +1,24 @@
+# Anydesk alias
+editAnydeskConfig() {
+    mkdir -p ~/.config/anydesk
+    vim ~/.config/anydesk/anydesk.cfg
+}
+
+listAnydesk() {
+    cat ~/.config/anydesk/anydesk.cfg
+}
+
+getAnydeskId() {
+    local name=$1
+    listAnydesk | grep -Pi "$name" | awk '{print $2}'
+}
+
+connectAnydesk() {
+    local name=$1
+    anydesk $(getAnydeskId $name)
+}
+
+alias ad-cfg="editAnydeskConfig"
+alias ad-ls="listAnydesk"
+alias ad-id="getAnydeskId"
+alias ad-conn="connectAnydesk"
