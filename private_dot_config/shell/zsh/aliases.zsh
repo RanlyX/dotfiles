@@ -2,22 +2,22 @@
 # zsh
 # ========================================================
 alias rlz="source $ZDOTDIR/.zshrc"
-alias edz="nvim $ZDOTDIR"
+alias edz="vim $ZDOTDIR"
 
 # Better ls
-alias ls='eza'
+alias ls='exa'
 
 # Detailed listing
-alias ll='eza -lh --git'
+alias ll='exa -lh --git'
 
 # Detailed listing including hidden files
-alias la='eza -lah --git'
+alias la='exa -lah --git'
 
 # Tree view
-alias tree='eza --tree'
+alias tree='exa --tree'
 
-# Reuse ls completions for eza (avoids defining a separate completion function)
-compdef eza=ls
+# Reuse ls completions for exa (avoids defining a separate completion function)
+compdef exa=ls
 
 # Better cat
 #alias cat='bat'
@@ -40,7 +40,7 @@ alias -- -='cd -'  # -- prevents - being parsed as a flag; cd - jumps to previou
 # Editor
 # =========================================================
 
-alias vim='nvim'
+alias vim='vim'
 
 # =========================================================
 # Git
