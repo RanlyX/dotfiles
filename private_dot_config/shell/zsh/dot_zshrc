@@ -109,7 +109,7 @@ source "$ZDOTDIR/aliases.zsh"
 #source "$ZDOTDIR/bindings.zsh"
 
 # Plugins and plugin manager
-source "$ZDOTDIR/plugins.zsh"
+# source "$ZDOTDIR/plugins.zsh"
 
 # =========================================================
 # Node / NVM
