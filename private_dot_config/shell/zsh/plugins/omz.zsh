@@ -34,7 +34,6 @@ installThemes() {
     local git_repo=$1
     local project=$(echo ${git_repo} | cut -d '/' -f 2)
     installFromGit "${git_repo}" "${ZTHEMEDIR}"
-    plugins+=("${project}")
     if [[ ! -L "${ZSH_THEMES}/${project}" ]]; then
         echo "Creating symlink for ${project}..."
         ln -sf "${ZTHEMEDIR}/${project}" "${ZSH_THEMES}/${project}"
