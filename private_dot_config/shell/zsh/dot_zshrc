@@ -74,7 +74,11 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 # Completion
 # =========================================================
 
+# # Load completion system
+# autoload -Uz compinit
 
+# # Initialize completion with cached metadata file
+# compinit -d "$ZSH_CACHE_HOME/zcompdump"
 
 # Enable interactive completion menu selection
 zstyle ':completion:*' menu select

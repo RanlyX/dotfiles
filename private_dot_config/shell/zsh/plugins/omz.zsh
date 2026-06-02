@@ -44,4 +44,5 @@ installThemes() {
 installThemes "romkatv/powerlevel10k"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+export ZSH_COMPDUMP="$ZSH_CACHE_HOME/zcompdump"
 source $ZSH/oh-my-zsh.sh
