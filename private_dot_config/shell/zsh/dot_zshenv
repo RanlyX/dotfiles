@@ -1,16 +1,29 @@
 # ~/.config/zsh/.zshenv
 
-# ---------- XDG base directories ----------
-# Centralizes config/cache/data locations
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
+# XDG configuration
+# export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+export ZSH_CACHE_HOME="${ZSH_CACHE_HOME:-$XDG_CACHE_HOME/shell/zsh}"
+export ZSH_STATE_HOME="${ZSH_STATE_HOME:-$XDG_STATE_HOME/shell/zsh}"
+export ZSH_DATA_HOME="${ZSH_DATA_HOME:-$XDG_DATA_HOME/shell/zsh}"
+
+
+
+# Zsh configuration
+
+# # ZDOTDIR
+# fi [[ -d "$XDG_CONFIG_HOME/shell/zsh" ]]; then
+#     export ZDOTDIR="$XDG_CONFIG_HOME/shell/zsh"
+# fi
+
 
 # ---------- Editor ----------
 # Default editor used by git, crontab, etc.
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="vim"
+export VISUAL="vim"
 
 # ---------- Pager ----------
 if command -v bat >/dev/null 2>&1; then
