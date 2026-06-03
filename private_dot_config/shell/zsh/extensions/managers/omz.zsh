@@ -1,4 +1,4 @@
-# ~/.config/shell/zsh/extensions/managers/omz.sh
+# ~/.config/shell/zsh/extensions/managers/omz.zsh
 
 # =========================================================
 # Oh my zsh manager
