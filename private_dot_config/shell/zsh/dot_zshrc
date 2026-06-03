@@ -129,7 +129,7 @@ fi
 #source "$ZDOTDIR/bindings.zsh"
 
 # Plugins and plugin manager
-source "$ZDOTDIR/plugins/plugins.zsh"
+source "$ZDOTDIR/extensions/plugins.zsh"
 
 # =========================================================
 # Node / NVM

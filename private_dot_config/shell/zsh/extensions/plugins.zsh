@@ -36,7 +36,7 @@ installFromGit() {
     fi
 }
 
-source "${ZDOTDIR}/plugins/omz.zsh"
+source "${ZDOTDIR}/extensions/omz.zsh"
 
 # _zplugin_load() {
 #   local plugin_path="${ZPLUGINDIR}/${2}"
