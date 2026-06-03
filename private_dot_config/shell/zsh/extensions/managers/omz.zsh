@@ -8,10 +8,10 @@
 installFromGit ohmyzsh/ohmyzsh ${ZSH_MANAGERS_DIR}
 
 # Custom path
-export ZSH="${ZSH_MANAGERS_DIR}/ohmyzsh"
-export ZSH_CUSTOM_DIR="${ZSH}/custom"
-export ZSH_CUSTOM_PLUGINS_DIR="${ZSH_CUSTOM_DIR}/plugins"
-export ZSH_CUSTOM_THEMES_DIR="${ZSH_CUSTOM_DIR}/themes"
+ZSH="${ZSH_MANAGERS_DIR}/ohmyzsh"
+ZSH_CUSTOM_DIR="${ZSH}/custom"
+ZSH_CUSTOM_PLUGINS_DIR="${ZSH_CUSTOM_DIR}/plugins"
+ZSH_CUSTOM_THEMES_DIR="${ZSH_CUSTOM_DIR}/themes"
 
 # =========================================================
 # Plugins
