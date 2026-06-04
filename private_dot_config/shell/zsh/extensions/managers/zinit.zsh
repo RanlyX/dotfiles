@@ -19,20 +19,23 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 # Plugins
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-history-substring-search
-zinit light zdharma-continuum/fast-syntax-highlighting
+source "$ZEXTENSIONSDIR/plugins.zsh" 
+for plugin in ${ZSH_PLUGINS[@]}; do
+    zinit light "${plugin}"
+done
 
-# Oh My Zsh 功能
-zinit snippet OMZ::lib/completion.zsh
-zinit snippet OMZ::lib/history.zsh
-zinit snippet OMZ::lib/key-bindings.zsh
-zinit snippet OMZ::lib/theme-and-appearance.zsh
+# OMZ plugins
+for plugin in ${OMZ_PLUGINS[@]}; do
+    zinit snippet OMZ::"${plugin}"
+done
+
+# Themes
+source "$ZEXTENSIONSDIR/themes.zsh" 
+for theme in ${ZSH_THEMES[@]}; do
+    zinit ice depth=1
+    zinit light romkatv/powerlevel10k
+done
 
 # key binding
 bindkey '^[[A' history-substring-search-up

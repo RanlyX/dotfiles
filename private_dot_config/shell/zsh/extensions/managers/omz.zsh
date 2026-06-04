@@ -30,14 +30,17 @@ installPlugins() {
     installFromGit "${git_repo}" "${ZSH_PLUGINS_DIR}" "--depth=1"
     plugins+=("${project}")
     if [[ ! -L "${ZSH_CUSTOM_PLUGINS_DIR}/${project}" ]]; then
-        echo "Creating symlink for ${project}..."
+        echo -e "\033[ACreating symlink for ${project}..."
         ln -sf "${ZSH_PLUGINS_DIR}/${project}" "${ZSH_CUSTOM_PLUGINS_DIR}/${project}"
+        echo
     fi
 }
 
-installPlugins "zsh-users/zsh-autosuggestions"
-installPlugins "zdharma-continuum/fast-syntax-highlighting" 
-installPlugins "zsh-users/zsh-history-substring-search" 
+source "$ZEXTENSIONSDIR/plugins.zsh" 
+
+for plugin in ${ZSH_PLUGINS[@]}; do
+    installPlugins "${plugin}"
+done
 
 # Debug message for plugins
 # echo "Plugins: ${plugins[@]}"
@@ -52,12 +55,17 @@ installThemes() {
     local project=$(echo ${git_repo} | cut -d '/' -f 2)
     installFromGit "${git_repo}" "${ZSH_THEMES_DIR}" "--depth=1"
     if [[ ! -L "${ZSH_CUSTOM_THEMES_DIR}/${project}" ]]; then
-        echo "Creating symlink for ${project}..."
+        echo -e "\033[ACreating symlink for ${project}..."
         ln -sf "${ZSH_THEMES_DIR}/${project}" "${ZSH_CUSTOM_THEMES_DIR}/${project}"
+        echo
     fi
 }
 
-installThemes "romkatv/powerlevel10k"
+source "$ZEXTENSIONSDIR/themes.zsh" 
+
+for theme in ${ZSH_THEMES[@]}; do
+    installThemes "${theme}"
+done
 
 # Set theme
 ZSH_THEME="powerlevel10k/powerlevel10k"

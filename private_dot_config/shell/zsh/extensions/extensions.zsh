@@ -26,7 +26,7 @@ installFromGit() {
 }
 
 # Zsh manager config
-ZMANAGER="zinit"
+ZMANAGER=""
 
 case ${ZMANAGER} in
     "omz")
