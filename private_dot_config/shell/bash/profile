@@ -1,0 +1,10 @@
+# ~/.config/shell/bash/profile
+
+BASHRC="$HOME/.config/shell/bash/bashrc" 
+
+if [ -n "$BASH_VERSION" ]; then
+    if [ -f "$BASHRC" ] ; then
+        . "$BASHRC"
+    fi
+fi
+
