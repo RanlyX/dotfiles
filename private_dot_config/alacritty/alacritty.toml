@@ -1,0 +1,71 @@
+# Alacritty configurate
+[env]
+TERM = "alacritty"
+LANG = "en_US.UTF-8"
+LC_CTYPE = "en_US.UTF-8"
+
+#[window]
+#decoration = "none"
+#gtk_theme_variant = "dark"
+
+[window.dimensions]
+lines = 24
+columns = 80
+
+
+[font]
+size = 9
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGS NF"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS NF"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGS NF"
+style = "Bold Italic"
+
+[colors]
+
+[colors.primary]
+background = '#252a35'
+foreground = '#EEFFFF'
+
+[colors.normal]
+black = '#252a35'
+blue = '#3A69FB'
+cyan = '#00FECA'
+green = '#13CA91'
+magenta = '#FF2079'
+red = '#F07178'
+white = '#EEFFFF'
+yellow = '#FDF200'
+
+[colors.bright]
+black = '#4A4A4A'
+blue = '#B2CCD6'
+cyan = '#FF5370'
+green = '#7898FB'
+magenta = '#EBB205'
+red = '#F78C6C'
+white = '#FFFFFF'
+yellow = '#EBB205'
+
+[colors.cursor]
+text = '#000000'
+cursor = '#EEFFFF'
+
+# key_bindings:
+#   - key: Insert
+#     mods: Shift
+#     action: PasteSelection
+#  - key: Insert
+#    mods: Control
+#    action: Copy
